@@ -6,7 +6,7 @@ class Node:
 class linkedist:
     def __init__(self):
         self.head = None
-
+    
     def add(self,data):
         newnode = Node(data)
         if self.head == None:
@@ -19,7 +19,7 @@ class linkedist:
 
     def print(self):
         if self.head is None:
-            print('nooo')
+            print('nooo') 
             return
         n = self.head
         while n is not None:

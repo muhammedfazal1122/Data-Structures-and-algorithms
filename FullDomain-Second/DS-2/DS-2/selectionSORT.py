@@ -16,3 +16,5 @@ for i in range(len(listt)-1):
         listt[i], listt[min_index] = listt[min_index], listt[i]
 
 print("Sorted Array:", listt)
+
+

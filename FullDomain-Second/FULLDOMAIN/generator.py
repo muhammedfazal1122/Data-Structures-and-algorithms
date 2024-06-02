@@ -12,7 +12,7 @@
 # def cube(n):
 #     for i in range(1,n+1):
 #         yield i**3
-#
+
 # s=cube(10)
 # for i in range(10):
 #     print(next(s))
@@ -88,16 +88,16 @@
 
 
 
-def gennrator():
-    n = 1
-    while n <= 10 :
-        sq = n*n
-        yield sq
-        n +=1
+# def gennrator():
+#     n = 1
+#     while n <= 10 :
+#         sq = n*n
+#         yield sq
+#         n +=1
 
-obj = gennrator()
+# obj = gennrator()
 
-for i in obj:
-    print(i)
+# for i in obj:
+#     print(i)
 
 
