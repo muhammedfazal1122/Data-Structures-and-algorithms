@@ -24,6 +24,23 @@ def delete(v):
             if v in list1:
                 list1.remove(v)
 
+
+def dfs(node,graph):
+    visited=set()
+    if node not in graph:
+        print('node not present')
+        return
+    stack=[]
+    stack.append(node)
+    while stack:
+        current=stack.pop()
+        if current not in visited:
+            print(current)
+            visited.add(current)
+            for i in graph[current]:
+                stack.append(i)
+
+
 def bfs(node,graph):
     if node not in graph:
         print('not present')

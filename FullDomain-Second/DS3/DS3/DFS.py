@@ -25,47 +25,45 @@ def delete(v):
                 list1.remove(v)
 
 
-# def dfs(node,graph):
-#     visited=set()
-#     if node not in graph:
-#         print('node not present')
-#         return
-#     stack=[]
-#     stack.append(node)
-#     while stack:
-#         current=stack.pop()
-#         if current not in visited:
-#             print(current)
-#             visited.add(current)
-#             for i in graph[current]:
-#                 stack.append(i)
+def dfs(node,graph):
+    visited=set()
+    if node not in graph:
+        print('node not present')
+        return
+    stack=[]
+    stack.append(node)
+    while stack:
+        current=stack.pop()
+        if current not in visited:
+            print(current)
+            visited.add(current)
+            for i in graph[current]:
+                stack.append(i)
 
-# def dfs(node,graph):
-#     if node not in graph:
-#         print('node not present')
-#         return
-#     visited=set()
-#     stack=[]
-#     stack.append(node)
-#     while stack:
-#         current=stack.pop()
-#         if current not in visited:
-#             print(current)
-#             visited.add(current)
-#             for i in graph[current]:
-#                 stack.append(i)
-#
-#
-# add_list("a")
-# add_list("b")
-# add_list("c")
-# add_edge("a","b")
-# add_edge("a","c")
-# add_edge("b","c")
-# # delete("a")
-# dfs("a",graph)
-# # print(graph)
-#
+def dfs_recurtion(node,graph):
+    visited = set()
+    if node not in graph:
+        print("noo")
+        return
+    if node not in visited:
+        print(node)
+        visited.add(node)
+        for i in graph[node]:
+            dfs_recurtion(i,graph)
+
+
+
+
+add_list("a")
+add_list("b")
+add_list("c")
+add_edge("a","b")
+add_edge("a","c")
+add_edge("b","c")
+# delete("a")
+dfs("a",graph)
+# print(graph)
+
 
 
 

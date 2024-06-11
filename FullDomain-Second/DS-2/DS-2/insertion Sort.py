@@ -21,7 +21,8 @@ print(list)
 #             lst[pos-1], lst[pos] = lst[pos], lst[pos-1]
 #             pos -= 1
 
+listt = [8, 7, 6, 5, 4, 3, 55, 66, 77, 3, 322, 112, 22, 33, 4, 454]
 
-# listt = [8, 7, 6, 5, 4, 3, 55, 66, 77, 3, 322, 112, 22, 33, 4, 454]
 # insertionSort(listt)
 # print(listt)
+

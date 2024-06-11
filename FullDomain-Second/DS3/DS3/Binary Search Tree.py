@@ -74,18 +74,14 @@ class binaryserch:
                 print("there is no value to delete in right")
         else:
             if self.lchild is None:
-                temp=self.rchild
-                self=None
-                return temp
+                return self.rchild
             if self.rchild is None:
-                temp=self.lchild
-                self=None
-                return temp
+                return self.lchild
 
             node=self.rchild# take Right because its is a rule.
             while node.lchild:# and check search small element it only contain left
                 node=node.lchild
-            self.key=node.key#(changing the main node To that value of lchild or node)#nodes key goes to current's space            self.rchild=self.rchild.delete(node.key)#(NONE return= To change the deltionnode to NONE)
+            self.key=node.key# changing the main node To that value of lchild or node)#nodes key goes to current's space            self.rchild=self.rchild.delete(node.key)#(NONE return= To change the deltionnode to NONE)
 
         return self#(return what we get from this recursiveFuncion or normal)
 

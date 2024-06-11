@@ -76,28 +76,5 @@
 #
 
 
-
-
-class stack:
-    def __init__(self):
-        self.item=[]
-
-    def push(self,data):
-        self.item.append(data)
-
-    def emptyStack(self):
-        return len(stack) == 0
-
-    def pop(self):
-        if self.emptyStack():
-            print("there is Nothing to delete")
-        else:
-            return self.item.pop()
-
-
-
-
-
-    def printSTACK(self):
-        print(self.item.data)
+ 
 

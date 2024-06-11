@@ -36,10 +36,10 @@ people = [
 
 
 
-# dict1={'apple':1,'orange':3,'mango':10,'pineapple':6}
+dict1={'apple':1,'orange':3,'mango':10,'pineapple':6}
 
-# sor = dict(sorted(dict1.items(),key=lambda x :x[1]))
-# print(sor)
+sor = dict(sorted(dict1.items(),key=lambda x :x[1]))
+print(sor)
 
 # asc=dict(sorted(dict1.items(),key=lambda x:x[1]))
 # print(asc)                         
