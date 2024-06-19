@@ -65,6 +65,21 @@ dfs("a",graph)
 # print(graph)
 
 
+def dfs(node,graph):
+    if node not in graph:
+        print("nod")
+        return 
+    visited = set()
+    stack = []
+    stack.append(node)
+    while stack:
+        currrnt  = stack.pop()
+        if currrnt not in visited:
+            print(currrnt)
+            visited.add(currrnt)
+            for i in graph[currrnt]:
+                stack.append(i)
+
 
 
 

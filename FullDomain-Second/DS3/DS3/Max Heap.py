@@ -12,7 +12,6 @@ class MaxHeap:
             self.heap[index], self.heap[parentIndex] = self.heap[parentIndex], self.heap[index]
             index = parentIndex
 
-
     def extract_max(self):
         if not self.heap:
             raise Exception("Heap is empty!")
@@ -45,6 +44,8 @@ maxHeap.insert(15)
 maxHeap.insert(20)
 maxHeap.insert(7)
 maxHeap.insert(9)
-maxHeap.insert(30)
+# maxHeap.insert(44)
+# maxHeap.insert(30)
+maxHeap.extract_max()
 
 print("Max Heap after extraction:", maxHeap.heap)

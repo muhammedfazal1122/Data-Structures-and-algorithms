@@ -7,13 +7,19 @@ class HeapSort:
 
         for intex in range(n // 2 - 1, -1, -1):
             self.heapify(n, intex)
+          
 
         for intex in range(n - 1, 0, -1):
             self.arr[0], self.arr[intex] = self.arr[intex], self.arr[0]
-            self.heapify(intex, 0)
+            self.heapify(intex, 0) # index: when we swap elemnt with arr[0], now only want to sort unsorted arr, thats why index = n-1 in each iteration        
+
+
 
     def heapify(self, n, intex):
+        print(n,intex)
+
         largest = intex
+        print(largest)
         left = 2 * intex + 1
         right = 2 * intex + 2
 
@@ -34,5 +40,4 @@ print("Original array:", arr)
 
 heap_sorter = HeapSort(arr)
 heap_sorter.heap_sort()
-# heap_sorter.print_sorted()
 print(arr)

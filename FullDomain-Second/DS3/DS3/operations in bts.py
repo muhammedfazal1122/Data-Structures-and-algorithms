@@ -31,7 +31,7 @@ class BST:
     def inorder(self):
         if self.lchild:
             self.lchild.inorder()
-        if self.key is not None and self.prime(self.key):
+        if self.key  and self.prime(self.key):
             print(self.key, end=" ")
         if self.rchild:
             self.rchild.inorder()
