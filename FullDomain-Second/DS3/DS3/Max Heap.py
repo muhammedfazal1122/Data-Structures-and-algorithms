@@ -2,7 +2,7 @@ class MaxHeap:
     def __init__(self):
         self.heap = []
         
-    def insert(self, value):
+    def insert(self, value): 
         self.heap.append(value)
         index = len(self.heap) - 1
         while index > 0:
@@ -47,5 +47,4 @@ maxHeap.insert(9)
 # maxHeap.insert(44)
 # maxHeap.insert(30)
 maxHeap.extract_max()
-
 print("Max Heap after extraction:", maxHeap.heap)

@@ -34,6 +34,7 @@ class Trie:
 
 
     def auto_search(self, prefix):
+        node = self.root
         for char in prefix:
             if char not in node.children:
                 return []  # No matches found
@@ -45,8 +46,10 @@ class Trie:
         if node.isEndOfWord:
             results.append(prefix)
         for char, next_node in node.children.items():
-            results.extend(self.search(next_node, (prefix+char)))
+            # Correctly extend the search from the next_node without passing it as an argument to self.search
+            results.extend(self.search2(next_node, prefix + char))
         return results
+
 
     def delete(self, word):
         
@@ -94,11 +97,12 @@ for word in words:
 
 # print(trie.startsWith("faz")) 
 
-# print(trie.search("app"))    
-print(trie.search("fazal")) 
-print(trie.search("fazza")) 
+# print(trie.search("app"))
+# print(trie.search("fazal"))
+# print(trie.search("fazza"))
 
-trie.delete("fazza")
 print("---------AFTER---------------")
-print(trie.search("fazal"))  
-print(trie.search("fazza")) 
+trie.delete("fazza")
+print(trie.auto_search("faz"))
+# print(trie.search("fazal"))  
+# print(trie.search("fazza")) 

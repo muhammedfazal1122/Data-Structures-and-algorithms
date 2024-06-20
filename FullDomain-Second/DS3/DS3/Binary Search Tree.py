@@ -8,7 +8,7 @@ class binaryserch:
         if self.key is None:
             self.key = data
 
-        if self.key == data:
+        if self.key == data: 
             return
         if self.key>data:
             if self.lchild:
@@ -67,7 +67,7 @@ class binaryserch:
                 self.lchild = self.lchild.delete(data)
             else:
                 print("there is no value to delete left")
-        elif self.key<data:
+        elif self.key < data:
             if self.rchild:
                 self.rchild = self.rchild.delete(data)
             else:

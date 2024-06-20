@@ -1,31 +1,30 @@
-class TrieNode:
+class Graph:
     def __init__(self) -> None:
-        self.child = {}
-        self.isEndOfWord = False
+        self.graph = {}
+
+    def insert_node(self,node):
+        if node in self.graph:
+            print("alredu")
+        self.graph[node] = []
+    def insert_edge(self,v1,v2):
+        if v1 not in self.graph:
+            print("not a elemnt")
+        elif v2 not in self.graph:
+            print("not a elemnt")
+        else:
+            self.graph[v1].append(v2)
+            self.graph[v2].append(v1)
+
+    def delete(self,v1):
+        if v1 not in self.graph:
+            print("fsadfasd")
+        self.graph.pop(v1)
+        for i in self.graph:
+            list1 = self.graph[i]
+            list1.remove(v1)
 
 
-class Trie:
-    def __init__(self) -> None:
-        self.root = TrieNode()
 
-    def insert(self,word):
-        node = self.root
-        for char in word:
-            if char not in node.child:
-                node.child[char] = TrieNode()
-            node = node.child[char]
-        node.isEndOfWord = True
-
-    def search(self,word):
-        node = self.root
-        for char in word:
-            if char not in node.child:
-                return False
-            node = node.child[char]
-        return node.isEndOfWord
-
-    def autosearch(self,prefix):
-        
 
 
 
