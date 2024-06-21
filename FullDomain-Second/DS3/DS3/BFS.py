@@ -52,11 +52,10 @@ def bfs(node,graph):
     while queue:
         current=queue.pop(0)
         if current not in visited:
-            print(current)
             visited.add(current)
-            for i in graph[current]:
-                if i not in visited:
-                    queue.append(i)
+            for neighbor  in graph[current]:
+                if neighbor  not in visited:
+                    queue.append(neighbor )
 
 add_list("a")
 add_list("b")

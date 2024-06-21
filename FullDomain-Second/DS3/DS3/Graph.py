@@ -79,6 +79,28 @@ class Graph:
                     list1.remove(v)
 
 
+    def is_cycle_using_bfs(graph, start):
+        if start not in graph:
+            print('Start node not present in the graph.')
+            return False
+
+        visited = set()
+        queue = [(start, None)]  # Store tuples of (node, parent) in the queue
+
+        while queue:
+            current, parent = queue.pop(0)
+            if current not in visited:
+                visited.add(current)
+                for neighbor in graph[current]:
+                    if neighbor == parent:  # Skip the parent node
+                        continue
+                    if neighbor in visited:  # If the neighbor is visited and is not the parent, a cycle exists
+                        return True
+                    queue.append((neighbor, current))  # Add the neighbor to the queue with the current node as its parent
+        return False  # No cycle found
+
+
+
 
 
 gg = Graph()

@@ -7,7 +7,7 @@ class HeapSort:
 
         for intex in range(n // 2 - 1, -1, -1):
             self.heapify(n, intex)
-          
+
 
         for intex in range(n - 1, 0, -1):
             self.arr[0], self.arr[intex] = self.arr[intex], self.arr[0]
@@ -41,3 +41,4 @@ print("Original array:", arr)
 heap_sorter = HeapSort(arr)
 heap_sorter.heap_sort()
 print(arr)
+

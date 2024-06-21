@@ -65,22 +65,43 @@ dfs("a",graph)
 # print(graph)
 
 
-def dfs(node,graph):
+def dfs(node, graph):
     if node not in graph:
-        print("nod")
-        return 
+        print("no")
+        return
     visited = set()
     stack = []
     stack.append(node)
+
     while stack:
-        currrnt  = stack.pop()
-        if currrnt not in visited:
-            print(currrnt)
-            visited.add(currrnt)
-            for i in graph[currrnt]:
-                stack.append(i)
+        current = stack.pop()
+        if current not in visited:
+            visited.add(current)
+            for nighbour in graph[current]:
+                if nighbour not in visited:
+                    stack.append(nighbour)
 
 
+
+def bfs(node,graph):
+    if node not in graph:
+        print("no")
+        return
+    visited = set()
+    queue = []
+    queue[(node,None)]
+
+    while queue:
+        current,parant = queue.pop(0)
+        if current not in visited:
+            visited.add(current)
+            for nighbour in graph[current]:
+                if nighbour == parant:
+                    continue
+                if nighbour in visited:
+                    return True
+                queue.append((nighbour,current))
+    return False
 
 
 ####...................................Function to perform BFS.
