@@ -33,6 +33,39 @@ class linkedist:
                 n.nref = n.nref
             n = n.nref
 
+    def merge_linked_list(left, right):
+        if left.head is None:
+            return right
+        if right.head is None:
+            return left
+        
+        node = left.head
+        while node.nref:
+            node= node.nref
+        node.nref = right.head
+
+        return left.head
+
+    def mergeTwoLists(self, list1, list2):
+        newlist = Node()
+        current = newlist
+
+        while list1 and list2:
+            if list1.val < list2.val:
+                current.nref = list1
+                list1 = list1.nref
+            else:
+                current.nref = list2
+                list2 = list2.nref
+            current = current.nref
+
+        if list1:
+            current.nref = list1
+        elif list2:
+            current.nref = list2
+        return newlist.nref
+
+
 ll = linkedist()
 ll.add(21)
 ll.add(22)

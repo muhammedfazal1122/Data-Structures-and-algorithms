@@ -98,6 +98,30 @@ class binaryserch:
 
 
 
+    def clone(self):
+        # Create a new tree with the same key
+        
+        new_tree = binaryserch(self.key)
+        # Clone left subtree if it exists
+        if self.lchild:
+            new_tree.lchild = self.lchild.clone()
+        
+        # Clone right subtree if it exists
+        if self.rchild:
+            new_tree.rchild = self.rchild.clone()
+        
+        return new_tree
+
+
+    def clone2(self):
+
+        newTre = binaryserch(self.key)
+
+        if self.lchild:
+            newTre.lchild = self.lchild.clone()
+        if self.rchild:
+            newTre.lchild = self.lchild.clone()
+        return newTre
 
 
 
@@ -106,11 +130,13 @@ list1=[6,5,63,58,15,79,35]
 for i in list1:
     root.insert(i)
 # root.search(10)
-print("pre order")
 root.preOrderTraversal()
-print("\nInorder:")
+print(".")
 root.inorderTraversal()
-print("\npostorder:")
-print("delete_only_if_two_child:")
-root.delete_only_if_two_child()
+print(".")
 root.postOrderTraversal()
+
+print("clone:")
+# root.delete_only_if_two_child()\
+new = root.clone()
+new.postOrderTraversal()
