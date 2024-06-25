@@ -1,13 +1,11 @@
-
 class Node:
-    def _init_(self, key, value):
+    def __init__(self, key, value):
         self.key = key
         self.value = value
         self.ref = None
 
-
 class HashTable:
-    def _init_(self, size=2):
+    def __init__(self, size=2):  # Corrected the constructor method name
         self.arr = [None] * size
         self.size = size
 
@@ -45,7 +43,6 @@ class HashTable:
         return False  # Key not found
 
     def print_table(self):
-
         for i in self.arr:
             if i is None:
                 print("None")
@@ -58,9 +55,7 @@ class HashTable:
                         print(current.value)
                     current = current.ref
 
-
-
-
+# Example usage
 s = HashTable()
 s.insert_item('sarath', 100)
 s.insert_item('amal', 200)

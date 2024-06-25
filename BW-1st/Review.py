@@ -157,5 +157,29 @@
 # bb.inorder()
 
 
-# merge two liked list
+class Node:
+    def __init__(self,key,value) -> None:
+        self.key = key
+        self.value = value
+        self.next = None
+
+class SeperateChaning:
+    def __init__(self,size) -> None:
+        self.arr = [None] * size
+        self.size = size
+    
+    def hash_function(self,key):
+        return hash(key) % self.size
+
+    def insert(self,key,value):
+        index = self.hash_function(key)
+        if self.arr[index] is None:
+            self.arr[index] = Node(key,value)
+        else:
+            curr = self.arr[index]
+            while curr.next:
+                curr = curr.next
+            curr.next = Node(key,value)
+                
+
 
