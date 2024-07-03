@@ -7,7 +7,8 @@ class Node:
 
 
 class HashTable:
-    def _init_(self, size=5):
+  
+    def __init__ (self, size=5):
         self.arr = [None] * size
         self.size = size
 

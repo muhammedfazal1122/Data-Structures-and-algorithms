@@ -52,8 +52,6 @@ class Trie:
 
 
     def delete(self, word):
-        
-
         # Helper function for deletion
         def delete_recursively(node, word, depth):
 

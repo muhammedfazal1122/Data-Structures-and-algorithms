@@ -113,15 +113,6 @@ class binaryserch:
         return new_tree
 
 
-    def clone2(self):
-
-        newTre = binaryserch(self.key)
-
-        if self.lchild:
-            newTre.lchild = self.lchild.clone()
-        if self.rchild:
-            newTre.lchild = self.lchild.clone()
-        return newTre
 
 
 
@@ -140,3 +131,5 @@ print("clone:")
 # root.delete_only_if_two_child()\
 new = root.clone()
 new.postOrderTraversal()
+
+

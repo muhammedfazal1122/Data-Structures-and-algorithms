@@ -3,8 +3,8 @@
 |------------|---------------|-------|---------------|------|---------------|------|---------------|------|---------------|------|
 | 9:00 AM    | Python        |  ==   | Python        |      | Python        |      | Python        |      | Python        |      |
 | 10:30 AM   | DSA           |  ==   | DSA           |      | DSA           |      | DSA           |      | DSA           |      |
-| 12:00 PM   | Django        | ==    | Django        |      | Django        |      | Django        |      | Django        |      |
-| 1:00 PM    | Lunch Break   |   ==  | Lunch Break   |      | Lunch Break   |      | Lunch Break   |      | Lunch Break   |      |
+| 12:00 PM   | Django        |  ==   | Django        |      | Django        |      | Django        |      | Django        |      |
+| 1:00 PM    | Lunch Break   |  ==   | Lunch Break   |      | Lunch Break   |      | Lunch Break   |      | Lunch Break   |      |
 | 2:00 PM    | Python        |       | Python        |      | Python        |      | Python        |      | Python        |      |
 | 3:00 PM    | DSA           |       | DSA           |      | DSA           |      | DSA           |      | DSA           |      |
 | 4:00 PM    | Project       |       | Project       |      | Project       |      | Project       |      | Project       |      |
@@ -18,3 +18,6 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 '''
+
+
+
