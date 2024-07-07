@@ -15,6 +15,7 @@ def pivot_place(listt,first,last):
     return right
 
 
+
 def QuickSort(listt,first,last):
     if first<last:
         p=pivot_place(listt,first,last)
