@@ -10,11 +10,16 @@ def bubbledown(arr, n, index):
 
 
 
+
+
+
+
+
     if rightc < n and arr[rightc] > arr[maxindex]:
         maxindex = rightc
 
 
-        
+
 
     if maxindex != index:
         swap(arr, index, maxindex)
