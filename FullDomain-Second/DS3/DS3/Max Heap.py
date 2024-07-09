@@ -1,7 +1,7 @@
 class MaxHeap:
     def __init__(self):
         self.heap = []
-        
+
     def insert(self, value): 
         self.heap.append(value)
         index = len(self.heap) - 1

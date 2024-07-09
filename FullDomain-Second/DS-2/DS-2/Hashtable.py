@@ -15,8 +15,8 @@ class HashTable:
 
 
 
-    def insert_item(self, key, value, i=0):
-        index = self.hash_key(key)
+    def insert_item(self, key, value, i=0): 
+        index = self.hash_key(key)          
 
         if self.arr[index] is None:
             self.arr[index] = Node(key, value)

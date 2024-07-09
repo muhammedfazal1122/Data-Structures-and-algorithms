@@ -27,7 +27,7 @@ class list1:
         if n is None:
             print('data not found')
         else:
-            newnode.ref=n.ref
+            newnode.ref=n.ref 
             n.ref=newnode
 
     def addbefore(self,data,x):
