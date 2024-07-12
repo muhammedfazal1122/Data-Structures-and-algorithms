@@ -82,6 +82,29 @@ print(summ)
 
 
 
+arr = {"a": {"b": {"c": 0}},
+       "b": {"c": 1},
+       "c": 2}
+
+
+def rec(arr):
+    summ = 0
+    for i in  arr.values():
+        if type(i) == dict:
+            summ += rec(i)
+        else:
+            summ += i
+    return summ
+        
+
+        
+print(rec(arr))
+
+
+
+
+# ----------------------------------------------------------------------------------------
+
 s = "xoxyyoyydfgwdfopkpofdf"
 
 count = 0
@@ -219,3 +242,25 @@ import requests
 print(requests.get('https://jsonplaceholder.typicode.com/todos/1').json())
 
 
+# ------------------------------------------------------------------------------------
+s = "aabbbbbcaaaaaiiiaaaa"
+# OUT = "a2b2c1a2"
+
+res = ""
+count = 1
+for j in range(len(s)-1):
+    if len(s)-1 == j+1:
+        count += 1
+        res += s[j] + str(count)
+        break
+    if s[j] == s[j+1]:
+        count += 1
+
+    else:
+        res += s[j] + str(count)
+        count=1
+        
+            
+print(res)
+        
+            

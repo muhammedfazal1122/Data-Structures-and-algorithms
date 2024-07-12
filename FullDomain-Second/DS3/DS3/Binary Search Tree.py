@@ -114,6 +114,61 @@ class binaryserch:
 
 
 
+    def minn(self):
+        curr = self
+        while curr.lchild is not None:
+            curr = curr.lchild
+        return curr.key
+
+    def maxx(self):
+        curr = self
+        while curr.rchild:
+            curr = curr.rchild
+        return curr.key
+
+    def sum_min_max(self):
+        return self.maxx()+ self.minn()
+
+    closest = 0
+    def find_closeset_element_of_target(self,data):
+        if self.key==data:
+            print("data found ")
+            return
+        if self.key>data:
+            if self.lchild:
+                self.lchild.find_closeset_element_of_target(data)
+            else:
+
+                print("no data found")
+                temp = self.key
+                print(temp) 
+        else:
+            if self.rchild:
+                self.rchild.find_closeset_element_of_target(data)
+            else:
+                temp = self.key
+
+
+
+    def check_bst_inorder_helper(self):
+        result = []
+        
+        if self.lchild:
+            self.lchild.check_bst_inorder()
+        result.append(self.key)
+        if self.rchild:
+            self.rchild.check_bst_inorder()
+        return result
+
+    def check_bst_inorder(self):
+        
+        result = self.check_bst_inorder_helper()
+
+        for i in range(1,len(result)):
+            if result[i-1] > result[i]:
+                return False
+        return True
+
 
 
 root=binaryserch(75)
